@@ -1,0 +1,251 @@
+/* Modern Minimalistic Dark Theme with Purple Accents */
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #e0e0e0;
+    --purple-accent: #9d4edd;
+    --purple-light: #c77dff;
+    --section-bg: #151515;
+    --spacing: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: var(--spacing) 0;
+    margin-bottom: var(--spacing);
+}
+
+h1 {
+    color: var(--purple-accent);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: var(--purple-light);
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.contact-info a {
+    color: var(--purple-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--purple-light);
+}
+
+/* Section Styles */
+section {
+    background: var(--section-bg);
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    border-bottom: 2px solid var(--purple-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background: rgba(157, 78, 221, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--purple-accent);
+}
+
+.skill-category h3 {
+    color: var(--purple-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Experience and Projects */
+.job, .project {
+    margin-bottom: 1.5rem;
+}
+
+.duration {
+    color: var(--purple-light);
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Education */
+.education-item {
+    margin-bottom: 1.5rem;
+}
+
+/* References */
+.reference {
+    background: rgba(157, 78, 221, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.reference strong {
+    color: var(--purple-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing) 0;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Smooth Animations */
+section {
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--purple-accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+/* Certificates Grid */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.certificate-card {
+    background: rgba(157, 78, 221, 0.05);
+    border: 1px solid var(--purple-accent);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(157, 78, 221, 0.2);
+}
+
+.certificate-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--purple-accent);
+}
+
+.certificate-card h3 {
+    padding: 1rem;
+    color: var(--purple-light);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive adjustments for certificates */
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .certificate-image {
+        height: 180px;
+    }
+}
+
+/* Ongoing Certifications */
+.ongoing-certifications {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(157, 78, 221, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--purple-accent);
+}
+
+.ongoing-certifications h3 {
+    color: var(--purple-light);
+    margin-bottom: 1rem;
+}
+
+.ongoing-certifications p {
+    margin-bottom: 0.8rem;
+}
+
+.status {
+    color: var(--purple-light);
+    font-style: italic;
+}
