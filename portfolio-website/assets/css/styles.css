@@ -31,6 +31,32 @@ header {
     margin-bottom: var(--spacing);
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.headshot {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--purple-accent);
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+}
+
+.header-text {
+    text-align: left;
+}
+
 h1 {
     color: var(--purple-accent);
     font-size: 3rem;
@@ -151,6 +177,20 @@ footer {
     h1 {
         font-size: 2.5rem;
     }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    .headshot {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* Smooth Animations */
@@ -248,4 +288,27 @@ section:hover {
 .status {
     color: var(--purple-light);
     font-style: italic;
+}
+
+/* Download CV Button */
+.download-cv {
+    display: block;
+    background: transparent;
+    color: var(--purple-accent);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 1rem auto;
+    transition: all 0.3s ease;
+    border: 2px solid var(--purple-accent);
+    max-width: fit-content;
+    text-align: center;
+    font-weight: 500;
+}
+
+.download-cv:hover {
+    background: var(--purple-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(157, 78, 221, 0.3);
 }
